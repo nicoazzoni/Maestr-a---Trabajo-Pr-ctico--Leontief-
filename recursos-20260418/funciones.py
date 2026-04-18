@@ -1,11 +1,10 @@
 import numpy as np
 
 def calcularLeontief(A):
-    L = []
-    # su código
-    
-    ###########
-    return L
+    tamaño = A.shape[0]
+    I = np.eye(tamaño)
+    return np.linalg.inv(I-A)
+
 
 def deltaProduccion(L, delta_d):
     delta_p = []
